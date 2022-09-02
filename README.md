@@ -1,1 +1,1 @@
-Learing GO!
+Learning GO!
