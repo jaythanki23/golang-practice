@@ -63,17 +63,32 @@ func main() {
 	// b := append(a, 6)
 	// fmt.Println(b)
 
-	var a []int = []int{3, 4, 7, 89, 44, 33, 4, 44, 69}
-	for i, elem := range a {
-		if i+1 >= len(a) {
-			continue
-		} else {
-			for _, elem2 := range a[i+1:] {
-				if elem == elem2 {
-					fmt.Println(elem)
-				}
-			}
-		}
+	// var a []int = []int{3, 4, 7, 89, 44, 33, 4, 44, 69}
+	// for i, elem := range a {
+	// 	if i+1 >= len(a) {
+	// 		continue
+	// 	} else {
+	// 		for _, elem2 := range a[i+1:] {
+	// 			if elem == elem2 {
+	// 				fmt.Println(elem)
+	// 			}
+	// 		}
+	// 	}
+	// }
+
+	// MAPS
+	var mp map[string]int = map[string]int{
+		"apples": 3,
+		"banana": 6,
+		"pears":  2,
 	}
+
+	fmt.Println(mp)
+	mp["apple"] = 5
+	mp["pears"] = 3
+	fmt.Println(mp)
+
+	val, ok := mp["apple"]
+	fmt.Println(val, ok)
 
 }
