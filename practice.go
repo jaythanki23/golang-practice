@@ -2,6 +2,25 @@ package main
 
 import "fmt"
 
+// FUNCTIONS
+// func add(x int, y int) int {
+// 	return x + y
+// }
+
+// func compute(x, y int) (add int, sub int) {
+// 	add = x + y
+// 	sub = x - y
+// 	return
+// }
+
+// func test2(myFunc func(int) int) {
+// 	fmt.Println(myFunc(7))
+// }
+
+func returnFunc(x string) func() {
+	return func() { fmt.Println(x) }
+}
+
 func main() {
 	// VARIABLES
 	// var name string = "Jay Thanki"
@@ -77,18 +96,34 @@ func main() {
 	// }
 
 	// MAPS
-	var mp map[string]int = map[string]int{
-		"apples": 3,
-		"banana": 6,
-		"pears":  2,
-	}
+	// var mp map[string]int = map[string]int{
+	// 	"apples": 3,
+	// 	"banana": 6,
+	// 	"pears":  2,
+	// }
 
-	fmt.Println(mp)
-	mp["apple"] = 5
-	mp["pears"] = 3
-	fmt.Println(mp)
+	// fmt.Println(mp)
+	// mp["apple"] = 5
+	// mp["pears"] = 3
+	// fmt.Println(mp)
 
-	val, ok := mp["apple"]
-	fmt.Println(val, ok)
+	// val, ok := mp["apple"]
+	// fmt.Println(val, ok)
+
+	//FUNCTIONS
+	// ans := add(5, 7)
+	// fmt.Println(ans)
+
+	// ans1, ans2 := compute(7, 5)
+	// fmt.Println(ans1, ans2)
+
+	// test := func(x int) int {
+	// 	return x * -1
+	// }
+
+	// test2(test)
+
+	// FUNCTIONS CLOSURES
+	// returnFunc("hello")()
 
 }
