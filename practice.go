@@ -17,8 +17,12 @@ import "fmt"
 // 	fmt.Println(myFunc(7))
 // }
 
-func returnFunc(x string) func() {
-	return func() { fmt.Println(x) }
+// func returnFunc(x string) func() {
+// 	return func() { fmt.Println(x) }
+// }
+
+func changeFirst(slice []int) {
+	slice[0] = 1000
 }
 
 func main() {
@@ -125,5 +129,12 @@ func main() {
 
 	// FUNCTIONS CLOSURES
 	// returnFunc("hello")()
+
+	// MUTABLE VS IMMUTABLE
+	// slices and maps are mutable, rest all are immutable
+	var x []int = []int{3, 4, 5}
+	fmt.Println(x)
+	changeFirst(x)
+	fmt.Println(x)
 
 }
